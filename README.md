@@ -20,7 +20,8 @@ Requirements:
 
 
 Setting Up FRCSim:
-Dual-Boot your computer with Ubuntu 16.04.3 LTS 
+- First you need to dual-Boot your computer with Ubuntu 16.04.3 LTS 
+
 You should first download from Canonical here: https://www.ubuntu.com/download/desktop
 Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
  Create a live USB by writing the iso to the usb (instructions here):
@@ -124,9 +125,10 @@ curl -ssL http://get.gazebosim.org | sh
 
 Install FRCSim
 > “With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
+
 Use curl to download FRCSim files to your machine.
 `curl -o \
-    $HOME/Downloads/simulation-2017.2.1.zip                                      http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip`
+    $HOME/Downloads/simulation-2017.2.1.zip                                      [http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip](http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip)`
 Create a directory for various simulation files. Note that Eclipse automatically created $HOME/wpilib when we installed the FRC Plugin. We are now manually creating $HOME/wpilib/simulation.
 mkdir $HOME/wpilib/simulation
 Unzip our simulation files to the directory we just created.
