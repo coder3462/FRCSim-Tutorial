@@ -3,9 +3,8 @@
 
 Requirements:
 
-- Either Mac or Linux(linux is recommended).
-
-- Gazebo, and in turn FRCSim does not run on Windows!
+- Either Linux or Mac(A linux system is more recommended).
+  - Gazebo, and in turn FRCSim does not run on Windows (but we do have dual booting instructions)!
 - A reliable and fast internet connection.
 - You will need to download massive amounts of software.
 - A fairly recent computer. 
