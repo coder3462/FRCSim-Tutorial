@@ -22,11 +22,11 @@ Requirements:
 
 Setting Up FRCSim:
 - First you need to dual-Boot your computer with Ubuntu 16.04.3 LTS 
- - You should first download from Canonical [here](https://www.ubuntu.com/download/desktop)
- - Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
- - Create a live USB by writing the iso to the usb:
-   - [Windows instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows)
-   - [OS X instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx)
+  - You should first download Ubuntu from Canonical [here](https://www.ubuntu.com/download/desktop)
+  - Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
+  - Create a live USB by writing the iso to the usb:
+    - [Windows instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows)
+    - [OS X instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx)
  - ONLY If you have previously tried to dual-boot a computer or have made recovery partitions, you will need to do this step to delete them. Press the start button, type in partition, open up disk management, delete all extraneous partitions you should only have these 2: 
 <pre>Windows C:
 EFI System Partition</pre>
