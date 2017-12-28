@@ -75,13 +75,16 @@ Immediately load the /etc/environment configuration file you just created.
 List the contents of your Java installation directory using your new $JAVA_HOME variable.
 `ls $JAVA_HOME`
 You should see contents like this, which means that your system is properly referencing the Java installation directory we set above.
-bin             LICENSE
-COPYRIGHT       man
-db              README.html
-include         release
-javafx-src.zip  src.zip
-jre             THIRDPARTYLICENSEREADME-JAVAFX.txt
-lib             THIRDPARTYLICENSEREADME.txt
+
+| :-----------: |:--------------------------------:|
+|bin            |LICENSE                           |
+|COPYRIGHT      |man                               |
+|db             |README.html                       |
+|include        |release                           |
+|javafx-src.zip |src.zip                           |
+|jre            |THIRDPARTYLICENSEREADME-JAVAFX.txt|
+|lib            |THIRDPARTYLICENSEREADME.txt       |
+
 Installing Eclipse
 Install eclipse only from the official source:
 https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-linux64.tar.gz
