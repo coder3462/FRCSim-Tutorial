@@ -23,41 +23,45 @@ Requirements:
 Setting Up FRCSim:
 - First you need to dual-Boot your computer with Ubuntu 16.04.3 LTS 
 
-You should first download from Canonical here: https://www.ubuntu.com/download/desktop
-Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
- Create a live USB by writing the iso to the usb (instructions here):
-If you have Windows: http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows
-If you have OS X: http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx
-ONLY If you have previously tried to dual-boot a computer or have made recovery partitions, you will need to do this step to delete them. Press the start button, type in partition, open up disk management, delete all extraneous partitions you should only have these 2: 
-Windows C:
-EFI System Partition
-Boot up the live usb. Reboot your computer and press F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see the boot manager menu. Boot from the UEFI USB stick OS.
-Try ubuntu(if you have done this before, you can go straight to setting it up). You may have some wireless problems on a hp as they are known for having wifi driver issues, if so don’t worry just use an ethernet cable or move right next to your router (while booted in ubuntu)
-If everything works download ubuntu. There should be a shortcut to the installer on the desktop. Just do everything the installer says and you should be able to boot into ubuntu by pressing F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see boot manager, then choose the option with ubuntu on it
+ - You should first download from Canonical here: https://www.ubuntu.com/download/desktop
+ - Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
+ - Create a live USB by writing the iso to the usb (instructions here):
+- If you have Windows: http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows
+- If you have OS X: http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx
+ - ONLY If you have previously tried to dual-boot a computer or have made recovery partitions, you will need to do this step to delete them. Press the start button, type in partition, open up disk management, delete all extraneous partitions you should only have these 2: 
+<pre>Windows C:
+EFI System Partition</pre>
+- Open up hard drive manager and either shrink partition of windows on your C: drive or make sure you have a drive inserted that is completely empty
+- Boot up the live usb. Reboot your computer and press F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see the boot manager menu. Boot from the UEFI USB stick OS.
+- Try ubuntu(if you have done this before, you can go straight to setting it up). You may have some wireless problems on a hp as they are known for having wifi driver issues, if so don’t worry just use an ethernet cable or move right next to your router (while booted in ubuntu)
+- **If everything works**, download ubuntu. There should be a shortcut to the installer on the desktop. Just do everything the installer says and you should be able to boot into ubuntu by pressing F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see boot manager, then choose the option with ubuntu on it
+
 Once Ubuntu has loaded up,
-Disable safe boot on your computer 
-Open up hard drive manager and either shrink partition of windows on your C: drive or make sure you have a drive inserted that is completely empty 
-Restart computer and hit interrupt key to open bios
-Boot from your usb or as card and begin installer
+- Disable safe boot on your computer
 
 Once ubuntu is installed,
-Tap the windows button (in this FRC guide we will refer to it as the ‘super’ button)
-Type in:
-Ubuntu Software
-Type in:
-GDebi
-Install the first one
-Optional - Download Google Chrome (recommended)
-https://www.google.com/chrome/browser/desktop/index.html
-Download WPILib (downloading WPILib is a bit different on ubuntu): as you have to add a repository first:
-Open terminal(ctrl +alt+t) then type:
-<pre>sudo apt-add-repository ppa:wpilib/toolchain</pre>
-Then you need to add java(warning: you will get a deprecation notice, but nvm it):
-<pre>sudo add-apt-repository ppa:webupd8team/java</pre>
-Once (all of the above is done run the following command - you should see all of the packages that you just installed as ubuntu shall have refreshed!):
-<pre>sudo apt-get update</pre>
-Now, paste the following command as is:
+- Tap the windows button (in this FRC guide we will refer to it as the ‘super’ button)
 
+Type in:
+<pre>Ubuntu Software</pre>
+Type in:
+<pre>GDebi</pre>
+Install the first one
+
+Optional - Download Google Chrome **(recommended)**:
+https://www.google.com/chrome/browser/desktop/index.html
+
+Download WPILib (downloading WPILib is a bit different on ubuntu): as you have to add a repository first:
+- Open terminal(ctrl +alt+t) then type:
+<pre>sudo apt-add-repository ppa:wpilib/toolchain</pre>
+
+Then you need to add java (warning: you will get a deprecation notice, but ignore it):
+<pre>sudo add-apt-repository ppa:webupd8team/java</pre>
+
+Once (all of the above is done run the following command - you should see all of the packages that you just installed in the terminal as ubuntu shall have refreshed!):
+<pre>sudo apt-get update</pre>
+
+Now, paste the following command as is:
 <pre>sudo apt-get install \
   git \
   libc6-i386 \
