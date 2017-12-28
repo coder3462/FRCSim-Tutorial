@@ -6,15 +6,16 @@ Requirements:
 - Either Mac or Linux(linux is recommended).
 
 - Gazebo, and in turn FRCSim does not run on Windows!
-A reliable and fast internet connection.
-You will need to download massive amounts of software.
-A fairly recent computer. 
-As a general rule, remember that FRCSim runs slightly slower than a demanding game.
-Things To Remember:
-Run these steps in the specified order.
-Wait for a step to finish before moving on.
-A step may perform unexpected actions, so you should always wait for it to finish.
-Read the instructions completely before running a command
+- A reliable and fast internet connection.
+- You will need to download massive amounts of software.
+- A fairly recent computer. 
+- As a general rule, remember that FRCSim runs slightly slower than a demanding game.
+- Things To Remember:
+  - Run these steps in the specified order.
+  - Wait for a step to finish before moving on.
+  - A step may perform unexpected actions, so you should always wait for it to finish.
+  - Read the instructions completely before running a command
+
 **AVOID VMs AT ALL COSTS!!!!!!**
 
 
