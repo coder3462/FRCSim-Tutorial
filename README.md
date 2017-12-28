@@ -51,28 +51,31 @@ Optional - Download Google Chrome (recommended)
 https://www.google.com/chrome/browser/desktop/index.html
 Download WPILib (downloading WPILib is a bit different on ubuntu): as you have to add a repository first:
 Open terminal(ctrl +alt+t) then type:
-sudo apt-add-repository ppa:wpilib/toolchain
+<pre>sudo apt-add-repository ppa:wpilib/toolchain</pre>
 Then you need to add java(warning: you will get a deprecation notice, but nvm it):
-sudo add-apt-repository ppa:webupd8team/java
+<pre>sudo add-apt-repository ppa:webupd8team/java</pre>
 Once (all of the above is done run the following command - you should see all of the packages that you just installed as ubuntu shall have refreshed!):
-sudo apt-get update
+<pre>sudo apt-get update</pre>
 Now, paste the following command as is:
 
-<pre>`sudo apt-get install \
+<pre>sudo apt-get install \
   git \
   libc6-i386 \
   curl \
   jstest-gtk gradle oracle-java8-installer \
   frc-toolchain meshlab cmake libprotobuf-dev \
-  libprotoc-dev protobuf-compiler`</pre>
+  libprotoc-dev protobuf-compiler</pre>
 
 Not necessary for most installations The $HOME/Downloads directory should already exist on your Ubuntu machine, but this will create it if it is not present.
-<pre>`mkdir -p $HOME/Downloads`</pre>
+<pre>mkdir -p $HOME/Downloads</pre>
+
 Now we will edit the file /etc/environment.
-<pre>`sudo nano /etc/environment`</pre>
+<pre>sudo nano /etc/environment</pre>
+
 Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
 <pre>`export JAVA_HOME="/usr/lib/jvm/java-8-oracle"`</pre>
-Immediately load the /etc/environment configuration file you just created.
+
+**<mark>Immediately</mark> load the /etc/environment configuration file you just created.**
 <pre>`source /etc/environment`</pre>
 List the contents of your Java installation directory using your new $JAVA_HOME variable.
 <pre>`ls $JAVA_HOME`</pre>
