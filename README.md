@@ -220,8 +220,8 @@ Troubleshooting:
 If robot isn’t moving:
 Just put allwpilib in $HOME/downloads and the simulation folder i sent in $HOME/wpilib/simulation
 Download links
-allwpilib: https://drive.google.com/file/d/1r7OACq7wfMrDpYKhzfQyqQ1FASNpL6Kt/view
-Simulation: https://drive.google.com/file/d/1m65NDMDnk5CLKA_qtWDlXYtBQY9ZIAkw/view
+[allwpilib](https://drive.google.com/file/d/1r7OACq7wfMrDpYKhzfQyqQ1FASNpL6Kt/view)
+[Simulation](https://drive.google.com/file/d/1m65NDMDnk5CLKA_qtWDlXYtBQY9ZIAkw/view)
 Then move the libgz_msgs from the build in allwpilib to plugins in your wpilib/simulations folder
 
 [Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]. There is probably another Gazebo process running, so you just need to restart your computer
@@ -234,8 +234,6 @@ Use ant to build
 </p>
 
 Sources: 
-Installing Ubuntu - https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/c/84464
-And https://help.ubuntu.com/community/WindowsDualBoot
-Setting up FRCSim and dependencies: http://willhaley.com/blog/frc-linux/#install-and-configure-prerequisites
-Running FRCSim: https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/l/228983-simulating-pacgoat-with-frcsim
-
+- Installing Ubuntu: [[1]](https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/c/84464) [[2]](https://help.ubuntu.com/community/WindowsDualBoot)
+- Setting up FRCSim and dependencies: [[3]](http://willhaley.com/blog/frc-linux/#install-and-configure-prerequisites
+- Running FRCSim: [[4]](https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/l/228983-simulating-pacgoat-with-frcsim)
