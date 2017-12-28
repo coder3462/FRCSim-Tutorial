@@ -77,7 +77,7 @@ Now we will edit the file /etc/environment.
 <pre>sudo nano /etc/environment</pre>
 
 Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
-<pre>export JAVA_HOME="/usr/lib/jvm/java-8-oracle"</pre>
+<pre>JAVA_HOME="/usr/lib/jvm/java-8-oracle"</pre>
 
 **<mark>Immediately</mark> load the /etc/environment configuration file you just created.**
 <pre>source /etc/environment</pre>
@@ -98,18 +98,21 @@ You should see contents like this, which means that your system is properly refe
 |lib            |THIRDPARTYLICENSEREADME.txt       |
 
 Installing Eclipse
-Install eclipse only from the official source:
+- Install eclipse only from the official source:
 https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-linux64.tar.gz
+
 (Click the orange button on the above website)
-Open the folder in nautilus (files)
-Right click the folder with the .tar.gz extension and click extract here
-Open the eclipse-installer directory and double-click the eclipse-inst installer to being the installation process.
-When prompted, select Eclipse IDE for Java Developers as the flavor of Eclipse that we want.
-Note that Eclipse will be installed to $HOME/eclipse/java-oxygen by default. The install location should not matter. You can change it, but I recommend leaving it alone unless you know what you are doing.
-Follow the prompts to install Eclipse, and then Launch Eclipse after the installation is finished.
-When prompted to choose a workspace, use the default value and click Ok unless you know what you are doing. The workspace is the directory where Eclipse will save your programming projects, and defaults to $HOME/workspace. Once again, You can change it, but I recommend leaving it alone unless you know what you are doing.
+
+- Open the folder in nautilus (files)
+- Right click the folder with the .tar.gz extension and click extract here
+- Open the eclipse-installer directory and double-click the eclipse-inst installer to being the installation process.
+- When prompted, select Eclipse IDE for Java Developers as the flavor of Eclipse that we want.
+- Note that Eclipse will be installed to $HOME/eclipse/java-oxygen by default. The install location should not matter. You can change it, but I recommend leaving it alone unless you know what you are doing.
+- Follow the prompts to install Eclipse, and then Launch Eclipse after the installation is finished.
+- When prompted to choose a workspace, use the default value and click Ok unless you know what you are doing. The workspace is the directory where Eclipse will save your programming projects, and defaults to $HOME/workspace. Once again, You can change it, but I recommend leaving it alone unless you know what you are doing.
+
 Check on a couple of configuration options in Eclipse.
-Go to: Window -> Preferences -> Java -> Installed JREs.
+- On the menu bar, go to: `Window -> Preferences -> Java -> Installed JREs`
 Make sure the Oracle JDK8 is listed.
 Go to: Window -> Preferences -> General -> Workspace
 Check Save automatically before build.
