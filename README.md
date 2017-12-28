@@ -217,17 +217,21 @@ Then click enable
 You auton code should be simulated
 
 Troubleshooting:
-If robot isn’t moving:
-Just put allwpilib in $HOME/downloads and the simulation folder i sent in $HOME/wpilib/simulation
-Download links
+
+- If robot isn’t moving:
+  1. Just put allwpilib in `$HOME/downloads` and the simulation folder in `$HOME/wpilib/simulation`
+Download links:
 [allwpilib](https://drive.google.com/file/d/1r7OACq7wfMrDpYKhzfQyqQ1FASNpL6Kt/view)
 [Simulation](https://drive.google.com/file/d/1m65NDMDnk5CLKA_qtWDlXYtBQY9ZIAkw/view)
-Then move the libgz_msgs from the build in allwpilib to plugins in your wpilib/simulations folder
+  2. Then move the libgz_msgs from the build in allwpilib to plugins in your wpilib/simulations folder
 
-[Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]. There is probably another Gazebo process running, so you just need to restart your computer
+ - <pre>[Err] [Master.cc:96] EXCEPTION: Unable to start server[bind: Address already in use]</pre> 
+ There is probably another Gazebo process running (even if you cannot see it open in a window), so you just need to restart your computer
 
-If eclipse isn’t working
-Use ant to build
+- If eclipse isn’t working
+A multidude of things could be wrong here, and we found that you can use ant to completely replace eclipse:
+<pre>cd /directory/of/repository
+ant jar</pre>
 
 <p align="center">
 <img src="https://lh6.googleusercontent.com/bC9IZw4vcDQaAW5zS-yXITbiDdfhunJEOVKK07VPs9uwrdEgCUFRUusQAZbaR2ynpfnyjEYcleRYWp2AMbZ-MMSD1Sif_s5uqxaxTnDQ5IQh8aqO2MtyfLnhjsoPrEcKF7sKvFDh" width="200" height="200" alt="MidKnight Inventors">
@@ -235,5 +239,5 @@ Use ant to build
 
 Sources: 
 - Installing Ubuntu: [[1]](https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/c/84464) [[2]](https://help.ubuntu.com/community/WindowsDualBoot)
-- Setting up FRCSim and dependencies: [[3]](http://willhaley.com/blog/frc-linux/#install-and-configure-prerequisites
+- Setting up FRCSim and dependencies: [[3]](http://willhaley.com/blog/frc-linux/#install-and-configure-prerequisites)
 - Running FRCSim: [[4]](https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/l/228983-simulating-pacgoat-with-frcsim)
