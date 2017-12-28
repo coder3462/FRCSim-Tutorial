@@ -18,6 +18,7 @@ Requirements:
 
 **AVOID VMs AT ALL COSTS!!!!!!**
 
+***
 
 Setting Up FRCSim:
 - First you need to dual-Boot your computer with Ubuntu 16.04.3 LTS 
@@ -56,24 +57,25 @@ sudo add-apt-repository ppa:webupd8team/java
 Once (all of the above is done run the following command - you should see all of the packages that you just installed as ubuntu shall have refreshed!):
 sudo apt-get update
 Now, paste the following command as is:
-`sudo apt-get install \
+
+<pre>`sudo apt-get install \
   git \
   libc6-i386 \
   curl \
   jstest-gtk gradle oracle-java8-installer \
   frc-toolchain meshlab cmake libprotobuf-dev \
-  libprotoc-dev protobuf-compiler`
+  libprotoc-dev protobuf-compiler`</pre>
 
 Not necessary for most installations The $HOME/Downloads directory should already exist on your Ubuntu machine, but this will create it if it is not present.
-`mkdir -p $HOME/Downloads`
+<pre>`mkdir -p $HOME/Downloads`</pre>
 Now we will edit the file /etc/environment.
-`sudo nano /etc/environment`
+<pre>`sudo nano /etc/environment`</pre>
 Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
-`export JAVA_HOME="/usr/lib/jvm/java-8-oracle"`
+<pre>`export JAVA_HOME="/usr/lib/jvm/java-8-oracle"`</pre>
 Immediately load the /etc/environment configuration file you just created.
-`source /etc/environment`
+<pre>`source /etc/environment`</pre>
 List the contents of your Java installation directory using your new $JAVA_HOME variable.
-`ls $JAVA_HOME`
+<pre>`ls $JAVA_HOME`</pre>
 You should see contents like this, which means that your system is properly referencing the Java installation directory we set above.
 
 |      like     |              this                |
@@ -125,7 +127,7 @@ Eclipse will install critical files after it restarts.
 Install Gazebo - 
 Gazebo (the simulator software) allows you to test your robot code in a (modeled) 3D space.
 Just run the following command in terminal:
-curl -ssL http://get.gazebosim.org | sh
+<pre>`curl -ssL http://get.gazebosim.org | sh`</pre>
 
 Install FRCSim
 > “With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
