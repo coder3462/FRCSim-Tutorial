@@ -53,24 +53,24 @@ sudo add-apt-repository ppa:webupd8team/java
 Once (all of the above is done run the following command - you should see all of the packages that you just installed as ubuntu shall have refreshed!):
 sudo apt-get update
 Now, paste the following command as is:
-sudo apt-get install \
+`sudo apt-get install \
   git \
   libc6-i386 \
   curl \
   jstest-gtk gradle oracle-java8-installer \
   frc-toolchain meshlab cmake libprotobuf-dev \
-  libprotoc-dev protobuf-compiler
+  libprotoc-dev protobuf-compiler`
 
 Not necessary for most installations The $HOME/Downloads directory should already exist on your Ubuntu machine, but this will create it if it is not present.
-mkdir -p $HOME/Downloads
+`mkdir -p $HOME/Downloads`
 Now we will edit the file /etc/environment.
-sudo nano /etc/environment
+`sudo nano /etc/environment`
 Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+`export JAVA_HOME="/usr/lib/jvm/java-8-oracle"`
 Immediately load the /etc/environment configuration file you just created.
-source /etc/environment
+`source /etc/environment`
 List the contents of your Java installation directory using your new $JAVA_HOME variable.
-ls $JAVA_HOME
+`ls $JAVA_HOME`
 You should see contents like this, which means that your system is properly referencing the Java installation directory we set above.
 bin             LICENSE
 COPYRIGHT       man
