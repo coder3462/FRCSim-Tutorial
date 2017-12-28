@@ -86,7 +86,7 @@ List the contents of your Java installation directory using your new $JAVA_HOME 
 
 You should see contents like this, which means that your system is properly referencing the Java installation directory we set above.
 
-|      like     |              this                |
+|               |                                  |
 | ------------- |:--------------------------------:|
 |bin            |LICENSE                           |
 |COPYRIGHT      |man                               |
