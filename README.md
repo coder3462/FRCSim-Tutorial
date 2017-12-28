@@ -73,12 +73,14 @@ Now we will edit the file /etc/environment.
 <pre>sudo nano /etc/environment</pre>
 
 Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
-<pre>`export JAVA_HOME="/usr/lib/jvm/java-8-oracle"`</pre>
+<pre>export JAVA_HOME="/usr/lib/jvm/java-8-oracle"</pre>
 
 **<mark>Immediately</mark> load the /etc/environment configuration file you just created.**
-<pre>`source /etc/environment`</pre>
+<pre>source /etc/environment</pre>
+
 List the contents of your Java installation directory using your new $JAVA_HOME variable.
-<pre>`ls $JAVA_HOME`</pre>
+<pre>ls $JAVA_HOME</pre>
+
 You should see contents like this, which means that your system is properly referencing the Java installation directory we set above.
 
 |      like     |              this                |
@@ -130,53 +132,55 @@ Eclipse will install critical files after it restarts.
 Install Gazebo - 
 Gazebo (the simulator software) allows you to test your robot code in a (modeled) 3D space.
 Just run the following command in terminal:
-<pre>`curl -ssL http://get.gazebosim.org | sh`</pre>
+<pre>curl -ssL http://get.gazebosim.org | sh</pre>
 
 Install FRCSim
 > “With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
 
 Use curl to download FRCSim files to your machine.
-`curl -o \
-    $HOME/Downloads/simulation-2017.2.1.zip                                      [http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip](http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip)`
+<pre>curl -o \
+    $HOME/Downloads/simulation-2017.2.1.zip                                      http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip</pre>
 Create a directory for various simulation files. Note that Eclipse automatically created $HOME/wpilib when we installed the FRC Plugin. We are now manually creating $HOME/wpilib/simulation.
 mkdir $HOME/wpilib/simulation
 Unzip our simulation files to the directory we just created.
-unzip \
+<pre>unzip \
     $HOME/Downloads/simulation-2017.2.1.zip \
-    -d $HOME/wpilib/simulation
+    -d $HOME/wpilib/simulation</pre>
 Create a system-wide symlink to the frcsim (FRC simulator) program.
-sudo ln -s $HOME/wpilib/simulation/frcsim /usr/bin/frcsim
+<pre>sudo ln -s $HOME/wpilib/simulation/frcsim /usr/bin/frcsim</pre>
 Create a system-wide symlink to the sim_ds (simulated driver station) program.
-sudo ln -s $HOME/wpilib/simulation/sim_ds /usr/bin/sim_ds
-We must manually compile the wpilib simulation plugins for FRCsim in order for the simulator to work properly on Linux. Navigate to the $HOME/Downloads directory in your terminal.
-cd $HOME/Downloads
+<pre>sudo ln -s $HOME/wpilib/simulation/sim_ds /usr/bin/sim_ds</pre>
+We must manually compile the wpilib simulation plugins for FRCsim in order for the simulator to work properly on Linux. 
+
+Navigate to the $HOME/Downloads directory in your terminal.
+<pre>cd $HOME/Downloads</pre>
 Use git to download some wpilib code that we must compile on our machine.
-git clone https://github.com/wpilibsuite/allwpilib
+<pre>git clone https://github.com/wpilibsuite/allwpilib</pre>
 Navigate to the allwpilib code that we just downloaded.
-cd $HOME/Downloads/allwpilib
+<pre>cd $HOME/Downloads/allwpilib</pre>
 Check out a specific version of the code we just downloaded.
-git checkout v2017.3.1
+<pre>git checkout v2017.3.1</pre>
 Run the gradlew script. That script will use gradle, a software build tool, to compile the software we just downloaded. This script takes a while to run. Though, occasionally, I see this script freeze and hang. If that happens, it is safe to kill this and re-run it.
-./gradlew build -PmakeSim
+<pre>./gradlew build -PmakeSim</pre>
 Copy the plugins we just compiled into our simulation plugins directory.
-cp ./build/install/simulation/plugins/* \
-    $HOME/wpilib/simulation/plugins/
+<pre>cp ./build/install/simulation/plugins/* \
+    $HOME/wpilib/simulation/plugins/</pre>
 
 Install model and world files
 2018 simulation files have not yet been released (and the 2017 files were never shared either) but we can install the 2016 simulation worlds and models to give us something to work off. Download some 3D models for our simulation.
-`curl -o \
-    $HOME/Downloads/models.zip \    [https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1](https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1)`
+<pre>curl -o \
+    $HOME/Downloads/models.zip \    https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1</pre>
 Unzip the model files into our $HOME/Downloads directory.
-unzip $HOME/Downloads/models.zip -d $HOME/Downloads/
+<pre>unzip $HOME/Downloads/models.zip -d $HOME/Downloads/</pre>
 Copy the downloaded gazebo simulation models into our simulation directory.
-cp -r $HOME/Downloads/frcsim-gazebo-models-4/models \
-    $HOME/wpilib/simulation/
+<pre>cp -r $HOME/Downloads/frcsim-gazebo-models-4/models \
+    $HOME/wpilib/simulation/</pre>
 Copy the downloaded gazebo simulation worlds into our simulation directory.
-cp -r $HOME/Downloads/frcsim-gazebo-models-4/worlds \
-    $HOME/wpilib/simulation/
+<pre>cp -r $HOME/Downloads/frcsim-gazebo-models-4/worlds \
+    $HOME/wpilib/simulation/</pre>
 Download the official 2016 game arena world file to our simulation directory.
-curl -o $HOME/wpilib/simulation/worlds/frc2016.world \
-    "http://first.wpi.edu/FRC/roborio/release/simulation/downloads/frc2016.world"
+<pre>curl -o $HOME/wpilib/simulation/worlds/frc2016.world \
+    "http://first.wpi.edu/FRC/roborio/release/simulation/downloads/frc2016.world"</pre>
 
 Create a sample application
 In eclipse:
@@ -185,7 +189,7 @@ Run
 
 1. FRCSim/Gazebo
 You only need to do this step once: Fire up frcsim (Gazebo) using the terminal.
-frcsim
+<pre>frcsim</pre>
 Wait until Gazebo has finished loading. Once Gazebo loads, insert the sample GearsBot robot provided by FRC.
 Gazebo -> Insert -> Models -> GearsBot
 Click somewhere in the world to place your model.
@@ -193,14 +197,14 @@ Close everything open right now
 
 Running Auton
 You only need to do this step once: install the 2016 field
-curl -o $HOME/wpilib/simulation/worlds/frc2016.world \
-    "http://first.wpi.edu/FRC/roborio/release/simulation/downloads/frc2016.world"
+<pre>curl -o $HOME/wpilib/simulation/worlds/frc2016.world \
+    "http://first.wpi.edu/FRC/roborio/release/simulation/downloads/frc2016.world"</pre>
 First open eclipse and run a eclipse 2016 prgm as a simulated robot deployment
-then type: 
-frcsim $HOME/wpilib/simulation/worlds/frc2016.world
+then type:
+<pre>frcsim $HOME/wpilib/simulation/worlds/frc2016.world</pre>
 then place the robot in the field
 then type in: 
-sim_ds
+<pre>sim_ds</pre>
 then click auton
 Then click enable
 You auton code should be simulated
