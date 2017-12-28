@@ -123,10 +123,10 @@ Just run the following command in terminal:
 curl -ssL http://get.gazebosim.org | sh
 
 Install FRCSim
-“With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
+> “With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
 Use curl to download FRCSim files to your machine.
-curl -o \
-    $HOME/Downloads/simulation-2017.2.1.zip                                      http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip
+`curl -o \
+    $HOME/Downloads/simulation-2017.2.1.zip                                      http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip`
 Create a directory for various simulation files. Note that Eclipse automatically created $HOME/wpilib when we installed the FRC Plugin. We are now manually creating $HOME/wpilib/simulation.
 mkdir $HOME/wpilib/simulation
 Unzip our simulation files to the directory we just created.
@@ -153,8 +153,8 @@ cp ./build/install/simulation/plugins/* \
 
 Install model and world files
 2018 simulation files have not yet been released (and the 2017 files were never shared either) but we can install the 2016 simulation worlds and models to give us something to work off. Download some 3D models for our simulation.
-curl -o \
-x    $HOME/Downloads/models.zip \    https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1
+`curl -o \
+    $HOME/Downloads/models.zip \    [https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1](https://usfirst.collab.net/sf/frs/do/downloadFile/projects.wpilib/frs.simulation.frcsim_gazebo_models/frs1160?dl=1)`
 Unzip the model files into our $HOME/Downloads directory.
 unzip $HOME/Downloads/models.zip -d $HOME/Downloads/
 Copy the downloaded gazebo simulation models into our simulation directory.
