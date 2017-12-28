@@ -229,7 +229,9 @@ Then move the libgz_msgs from the build in allwpilib to plugins in your wpilib/s
 If eclipse isn’t working
 Use ant to build
 
+<p align="center">
 ![Logo](https://lh6.googleusercontent.com/bC9IZw4vcDQaAW5zS-yXITbiDdfhunJEOVKK07VPs9uwrdEgCUFRUusQAZbaR2ynpfnyjEYcleRYWp2AMbZ-MMSD1Sif_s5uqxaxTnDQ5IQh8aqO2MtyfLnhjsoPrEcKF7sKvFDh "MidKnight Inventors")
+</p>
 
 Sources: 
 Installing Ubuntu - https://wpilib.screenstepslive.com/s/currentCS/m/frcsim/c/84464
