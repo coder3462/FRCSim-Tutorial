@@ -1,5 +1,5 @@
 # Installation Guide: FRCSim w/ Java
-Written & Provided by FRC 1923: The MidKnight Inventors  &nbsp;<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="50" height="50"  alt="MKI">
+Written & Provided by FRC 1923: The MidKnight Inventors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="50" height="50"  alt="MKI">
 ## YOU WILL NEED:
 
 - Ubuntu 16.04 or macOS
