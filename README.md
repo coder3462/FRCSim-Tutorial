@@ -1,5 +1,5 @@
 # Installation Guide: FRCSim w/ Java
-Written & Provided by FRC 1923: The MidKnight Inventors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="50" height="50"  alt="MKI">
+Written & Provided by FRC 1923: _The MidKnight Inventors_ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="50" height="50"  alt="MKI">
 ## YOU WILL NEED:
 
 - Ubuntu 16.04 or macOS
@@ -88,11 +88,9 @@ You should see contents like this, which means that your system is properly refe
 |jre            |THIRDPARTYLICENSEREADME-JAVAFX.txt|
 |lib            |THIRDPARTYLICENSEREADME.txt       |
 
-## Installing Eclipse
+## INSTALLING ECLIPSE: 
 - Install eclipse:
 https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-linux64.tar.gz
-
-(Click the orange button on the above website)
 
 - Open the folder in nautilus (files)
 - Right click the folder with the .tar.gz extension and click 'extract here'
@@ -112,37 +110,38 @@ Go to: Window -> Preferences -> General -> Workspace
   
 Note that, if you used all the default settings, Eclipse should now be installed at $HOME/eclipse/java-oxygen/eclipse.
 
-## Install Eclipse FRC Plugins
-First we shall install CTRE Toolsuite
-Since you are not on windows, you MUST use the following link: http://www.ctr-electronics.com//downloads/lib/CTRE_FRCLibs_NON-WINDOWS_v4.4.1.14.zip
-Once installed, extract to wherever you want (personally i recommend $HOME)
-Now open eclipse (we will get back to CTRE Toolsuite later)
-Now we will install the Eclipse FRC plugins. The Eclipse plugins for FRC assist you in building, deploying, and testing Robot projects. Be sure that you do not interrupt this process. It may seem to hang or freeze at times (especially on a slow machine), but let it take the time it needs.
-Help -> Install new software -> Add…
-Use the following settings.
-Name: FRC Plugins
-Location: http://first.wpi.edu/FRC/roborio/release/eclipse/
-Click Ok
-Expand the WPILib Robot Development repo.
-Check the box for the Robot Java Development plugin.
-Click Next, and follow the wizard and confirm and agree to the prompts presented to you.
-You may see a message that says Warning: You are installing software that contains unsigned content. Although this is not ideal, it is safe to click Ok.
-Eclipse will prompt you to restart itself. Let it.
-Eclipse will install critical files after it restarts.
+## INSTALLING FRC ECLIPSE PLUGINS:
+- Install CTRE Toolsuite: Since you are not on windows, you MUST use the following link: http://www.ctr-electronics.com//downloads/lib/CTRE_FRCLibs_NON-WINDOWS_v4.4.1.14.zip
+- Once installed, extract to your desired location (We recommend $HOME)
+- Open Eclipse - we will get back to CTRE Toolsuite later. 
+- Install the Eclipse FRC plugins. The Eclipse plugins for FRC assist you in building, deploying, and testing Robot projects. Be sure that you do not interrupt this process. It may seem to hang or freeze at times (especially on a slow machine)
+  - Help -> Install new software -> Add…
+  - Use the following settings.
 
-Install Gazebo - 
+Name: FRC Plugins
+
+Location: http://first.wpi.edu/FRC/roborio/release/eclipse/
+  - Click Ok
+  
+- Expand the WPILib Robot Development repo.
+  - Check the box for the Robot Java Development plugin.
+- Click Next, and follow the wizard and confirm and agree to the prompts presented to you.
+- You may see a message that says "Warning: You are installing software that contains unsigned content." Although this is not ideal, it is safe to click Ok.
+- Eclipse will prompt you to restart itself. Let it. Eclipse will install critical files after it restarts.
+
+## INSTALLING GAZEBO: 
 Gazebo (the simulator software) allows you to test your robot code in a (modeled) 3D space.
-Just run the following command in terminal:
+- Just run the following command in terminal:
 <pre>curl -ssL http://get.gazebosim.org | sh</pre>
 
-Install FRCSim
+## INSTALLING FRCSIM:
 > “With FRCSim, you should be able to finish 90% Of your programming without ever touching a RoboRIO. We want you to be able to test your code BEFORE you put in on your robot, and before the robot is even built. FRCSim allows robot code written in C++ or Java that normally runs on your RoboRIO to be run on your laptop or desktop. It connects to custom robot models in the Gazebo robot simulator.“ [3]
 
-Use curl to download FRCSim files to your machine.
+- Use curl to download FRCSim files to your machine.
 <pre>curl -o \
     $HOME/Downloads/simulation-2017.2.1.zip                                      http://first.wpi.edu/FRC/roborio/maven/release/edu/wpi/first/wpilib/simulation/simulation/2017.2.1/simulation-2017.2.1.zip</pre>
-Create a directory for various simulation files. Note that Eclipse automatically created $HOME/wpilib when we installed the FRC Plugin. We are now manually creating $HOME/wpilib/simulation.
-mkdir $HOME/wpilib/simulation
+- Create a directory for various simulation files. Note that Eclipse automatically created $HOME/wpilib when we installed the FRC Plugin. We are now manually creating $HOME/wpilib/simulation.
+<pre>mkdir $HOME/wpilib/simulation</pre>
 Unzip our simulation files to the directory we just created.
 <pre>unzip \
     $HOME/Downloads/simulation-2017.2.1.zip \
