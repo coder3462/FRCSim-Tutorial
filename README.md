@@ -1,6 +1,10 @@
 # Installation Guide: FRCSim w/ Java
 Written & Provided by FRC 1923: The MidKnight Inventors
 
+<p align="right>
+<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" alt="MKI">
+</p>
+
 ## YOU WILL NEED:
 
 - Ubuntu 16.04 or macOS
@@ -18,7 +22,7 @@ Written & Provided by FRC 1923: The MidKnight Inventors
 
 ***
 
-## HOW TO DUAL-BOOT UBUNTU:
+## HOW TO DUAL-BOOT WITH UBUNTU:
 - Download Ubuntu 16.04.3 LTS here: https://www.ubuntu.com/download/desktop
 
 Once you have downloaded the .iso file, burn the file to a USB flash drive (> 2GB)
