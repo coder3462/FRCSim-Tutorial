@@ -1,6 +1,7 @@
 # Installation Guide: FRCSim w/ Java
-Written & Provided by FRC 1923: The MidKnight Inventors<p align="center>
-<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="50" height="50"  alt="MKI">
+Written & Provided by FRC 1923: The MidKnight Inventors
+<p align="right">
+<img src="https://lh4.googleusercontent.com/z4zQHhzWbmiz0gmUQWa_Y-WoJBjg2wY_YAoMirSP-zFnpc-eNsXC51fy7cHZpKPm-Z7P5mqYpDh94nIiuKMHhbQGNgopkZroVZIvWGdQWVlCp3HItm_t3mB7YEDiSzzZIuvb-ocd" width="100" height="100"  alt="MKI">
 </p>
 
 ## YOU WILL NEED:
