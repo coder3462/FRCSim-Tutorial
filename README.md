@@ -1,63 +1,59 @@
-# FRCSim-Tutorial
-1923 Installation Guide: FRCSim
+# Installation Guide: FRCSim w/ Java
+Written & Provided by FRC 1923: The MidKnight Inventors
 
-Requirements:
+## YOU WILL NEED:
 
-- Either Linux or Mac(A linux system is more recommended).
-  - Gazebo, and in turn FRCSim does not run on Windows (but we do have dual booting instructions)!
-- A reliable and fast internet connection.
-- You will need to download massive amounts of software.
-- A fairly recent computer. 
-- As a general rule, remember that FRCSim runs slightly slower than a demanding game.
-- Things To Remember:
-  - Run these steps in the specified order.
-  - Wait for a step to finish before moving on.
-  - A step may perform unexpected actions, so you should always wait for it to finish.
-  - Read the instructions completely before running a command
+- Ubuntu 16.04 or macOS
+  - If you’re using Windows, we recommend dual booting your computer (Instructions provided below)
+- An internet connection for software downloads
+- Recommended: At least an i5 processor and 16GB ram 
+  - As a general rule, remember that FRCSim is more resource-intensive than Solidworks.
 
-**AVOID VMs AT ALL COSTS!!!!!!**
+## THINGS TO REMEMBER:
+- Wait for a step to finish before moving on, as programs may perform unexpected actions.
+- Read the instructions completely before running a command.
+- Avoid Virtual Machines at all costs! VMs can be bogged down by lag when running high-intensity programs.
+- <pre>Formatted text (like this line) represents shell commands; run them in a terminal.</pre>
+
 
 ***
 
-Setting Up FRCSim:
-- First you need to dual-Boot your computer with Ubuntu 16.04.3 LTS 
-  - You should first download Ubuntu from Canonical [here](https://www.ubuntu.com/download/desktop)
-  - Once you have downloaded the .iso file, burn the file to a usb flash drive which should have at least 2 GB
-  - Create a live USB by writing the iso to the usb:
-    - [Windows instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows)
-    - [OS X instructions](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx)
- - ONLY If you have previously tried to dual-boot a computer or have made recovery partitions, you will need to do this step to delete them. Press the start button, type in partition, open up disk management, delete all extraneous partitions you should only have these 2: 
-<pre>Windows C:
-EFI System Partition</pre>
+## HOW TO DUAL-BOOT UBUNTU:
+- Download Ubuntu 16.04.3 LTS here: https://www.ubuntu.com/download/desktop
 
-- Open up hard drive manager and either shrink partition of windows on your C: drive or make sure you have a drive inserted that is completely empty
-- Boot up the live usb. Reboot your computer and press F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see the boot manager menu. Boot from the UEFI USB stick OS.
-- Try ubuntu(if you have done this before, you can go straight to setting it up). You may have some wireless problems on a hp as they are known for having wifi driver issues, if so don’t worry just use an ethernet cable or move right next to your router (while booted in ubuntu)
-- **If everything works**, download ubuntu. There should be a shortcut to the installer on the desktop. Just do everything the installer says and you should be able to boot into ubuntu by pressing F9 (the keyboard key may vary from computer to computer) repeatedly after rebooting until you see boot manager, then choose the option with ubuntu on it
+Once you have downloaded the .iso file, burn the file to a USB flash drive (> 2GB)
+- Create a live USB by writing the .iso to the USB:
+http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows
+  - If you have have previously tried to dual-boot a computer or have made recovery partitions, you should delete them. 
+Press the start button, type in partition, open up disk management, delete all extraneous partitions.  You should only have Windows C: & EFI System Partition
+- Boot up Ubuntu via the live USB: Reboot your computer and hold your interupt key  after rebooting, to reach the boot manager menu. Boot from the UEFI USB stick.
+- If your system works from the USB,  you can load it to your computer via the installer on the desktop. 
+- Follow the Ubuntu installer instructions; Boot into ubuntu by rebooting your computer, holding the startup interrupt key & choosing Ubuntu.
+- Boot your computer into BIOS. Navigate to Startup Options -> Safe Boot and make sure it reads disabled.
+- Open up Hard Drive Manager. 
+  - Option 1: Shrink the partition of Windows on your C: drive (free at least 42 Gb) 
+  - Option 2: Make sure you have a drive inserted that is completely empty 
+- Restart your computer and hit the interrupt key to open BIOS.
+- Boot from your USB or sd card & begin installer
 
-Once Ubuntu has loaded up,
-- Disable safe boot on your computer
 
-Once ubuntu is installed,
-- Tap the windows button (in this FRC guide we will refer to it as the ‘super’ button)
+## ONCE UBUNTU IS INSTALLED: 
+- Tap the windows button (Also referred to as the ‘super key’ on Linux)
+- Type in: Ubuntu Software
+- Type in: GDebi
+  - Install the first one
 
-Type in:
-<pre>Ubuntu Software</pre>
-Type in:
-<pre>GDebi</pre>
-Install the first one
-
-Optional - Download Google Chrome **(recommended)**:
+- Optional - Download Google Chrome **(recommended)**:
 https://www.google.com/chrome/browser/desktop/index.html
 
-Download WPILib (downloading WPILib is a bit different on ubuntu): as you have to add a repository first:
-- Open terminal(ctrl +alt+t) then type:
+Download WPILib (somewhat different on ubuntu) by adding the repository first.
+- Open terminal then type:
 <pre>sudo apt-add-repository ppa:wpilib/toolchain</pre>
 
-Then you need to add java (warning: you will get a deprecation notice, but ignore it):
+Then you need to add java (warning: you will get a deprecation notice):
 <pre>sudo add-apt-repository ppa:webupd8team/java</pre>
 
-Once (all of the above is done run the following command - you should see all of the packages that you just installed in the terminal as ubuntu shall have refreshed!):
+Run the following command - you should see all of the packages that you just installed:
 <pre>sudo apt-get update</pre>
 
 Now, paste the following command as is:
@@ -69,13 +65,10 @@ Now, paste the following command as is:
   frc-toolchain meshlab cmake libprotobuf-dev \
   libprotoc-dev protobuf-compiler</pre>
 
-Not necessary for most installations The $HOME/Downloads directory should already exist on your Ubuntu machine, but this will create it if it is not present.
-<pre>mkdir -p $HOME/Downloads</pre>
-
 Now we will edit the file /etc/environment.
 <pre>sudo nano /etc/environment</pre>
 
-Append a new line with this content. This defines a system-wide variable named JAVA_HOME that references the install location of Java on your machine.
+Append a line with the following. This will define a system-wide variable named JAVA_HOME that references the install location of Java on your machine:
 <pre>JAVA_HOME="/usr/lib/jvm/java-8-oracle"</pre>
 
 **<mark>Immediately</mark> load the /etc/environment configuration file you just created.**
@@ -96,28 +89,31 @@ You should see contents like this, which means that your system is properly refe
 |jre            |THIRDPARTYLICENSEREADME-JAVAFX.txt|
 |lib            |THIRDPARTYLICENSEREADME.txt       |
 
-Installing Eclipse
-- Install eclipse only from the official source:
+## Installing Eclipse
+- Install eclipse:
 https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-linux64.tar.gz
 
 (Click the orange button on the above website)
 
 - Open the folder in nautilus (files)
-- Right click the folder with the .tar.gz extension and click extract here
-- Open the eclipse-installer directory and double-click the eclipse-inst installer to being the installation process.
+- Right click the folder with the .tar.gz extension and click 'extract here'
+- Open the eclipse-installer directory; double-click the eclipse-inst installer to being the installation process.
 - When prompted, select Eclipse IDE for Java Developers as the flavor of Eclipse that we want.
-- Note that Eclipse will be installed to $HOME/eclipse/java-oxygen by default. The install location should not matter. You can change it, but I recommend leaving it alone unless you know what you are doing.
-- Follow the prompts to install Eclipse, and then Launch Eclipse after the installation is finished.
-- When prompted to choose a workspace, use the default value and click Ok unless you know what you are doing. The workspace is the directory where Eclipse will save your programming projects, and defaults to $HOME/workspace. Once again, You can change it, but I recommend leaving it alone unless you know what you are doing.
+  - Note that Eclipse will be installed to $HOME/eclipse/java-oxygen by default.
+- Follow the prompts to install Eclipse, and launch Eclipse after installation is complete
+- When prompted to choose a workspace, use the default value and click OK. The workspace is the directory where Eclipse will save your programming projects, and defaults to $HOME/workspace.
 
-Check on a couple of configuration options in Eclipse.
-- On the menu bar, go to: `Window -> Preferences -> Java -> Installed JREs`
-Make sure the Oracle JDK8 is listed.
+- Check on a couple of configuration options in Eclipse.
+
+On the menu bar, go to: `Window -> Preferences -> Java -> Installed JREs`
+  - Make sure the Oracle JDK8 is listed.
+
 Go to: Window -> Preferences -> General -> Workspace
-Check Save automatically before build.
+  - Check Save automatically before build.
+  
 Note that, if you used all the default settings, Eclipse should now be installed at $HOME/eclipse/java-oxygen/eclipse.
 
-Install Eclipse FRC Plugins
+## Install Eclipse FRC Plugins
 First we shall install CTRE Toolsuite
 Since you are not on windows, you MUST use the following link: http://www.ctr-electronics.com//downloads/lib/CTRE_FRCLibs_NON-WINDOWS_v4.4.1.14.zip
 Once installed, extract to wherever you want (personally i recommend $HOME)
